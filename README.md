@@ -28,7 +28,7 @@ A premium luxury fashion e-commerce platform with an intelligent outfit builder,
 
 ## 🚀 Live Demo
 
-🔗 [abdoibrahim20.github.io/Stylique](https://abdoibrahim20.github.io/Stylique)
+🔗 [abdoibrahim20.github.io/Stylique]((https://abdoibrahim20.github.io/Stylique/)
 
 ---
 
