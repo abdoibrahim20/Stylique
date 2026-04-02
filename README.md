@@ -1,6 +1,6 @@
 # 👗 Stylique — Luxury Outfit Builder & Fashion Store
 
-![Preview](preview.png)
+![Preview](Preview.png)
 
 A premium luxury fashion e-commerce platform with an intelligent outfit builder, shopping cart, and dark/light theme.
 
