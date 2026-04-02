@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Stylique — Luxury Outfit Builder & Fashion Store. Build premium outfits, shop modern fashion, and create complete stylish looks. By Abdelrahman Ibrahim Nasef.">
+    <meta name="keywords" content="luxury fashion, outfit builder, shoes, clothing, accessories, premium store">
+    <meta name="author" content="Abdelrahman Ibrahim Nasef">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stylique | Luxury Outfit Builder & Fashion Store">
+    <meta property="og:description" content="Build premium outfits and shop luxury fashion effortlessly.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stylique">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stylique | Luxury Outfit Builder">
+    <meta name="twitter:description" content="Build premium outfits and shop luxury fashion effortlessly.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop">
+
+    <title>Stylique | Luxury Outfit Builder & Fashion Store</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen" aria-hidden="true">
+        <div class="loading-mark">S</div>
+        <p>Curating a premium Stylique experience...</p>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="site-shell">
+
+        <!-- HEADER -->
+        <header class="site-header" role="banner">
+            <a class="brand" href="#home" aria-label="Stylique home">
+                <span class="brand-mark">S</span>
+                <span class="brand-copy">
+                    <strong>Stylique</strong>
+                    <small>by Abdelrahman Ibrahim Nasef</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false"
+                aria-controls="site-nav">☰</button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <a href="#home" data-nav-route="home">Home</a>
+                <a href="#shop" data-nav-route="shop">Shop</a>
+                <a href="#builder" data-nav-route="builder">Outfit Builder</a>
+                <a href="#checkout" data-nav-route="checkout">Checkout</a>
+                <a href="#about" data-nav-route="about">About</a>
+                <a href="#contact" data-nav-route="contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button">Switch to Ivory</button>
+                <button class="cart-toggle" id="cart-toggle" type="button" aria-controls="cart-drawer"
+                    aria-expanded="false">
+                    Cart
+                    <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- CART DRAWER -->
+        <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-labelledby="cart-title" role="dialog">
+            <div class="cart-header">
+                <div>
+                    <p class="eyebrow">Your selection</p>
+                    <h2 id="cart-title">Cart</h2>
+                </div>
+                <button class="icon-button" id="cart-close" type="button" aria-label="Close cart">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items" aria-live="polite"></div>
+            <div class="cart-footer">
+                <div class="cart-summary-line">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal">$0.00</strong>
+                </div>
+                <p class="subtle-text">Complimentary styling and shipping included for this demo.</p>
+                <button class="button" id="cart-checkout" type="button">Proceed to Checkout</button>
+            </div>
+        </aside>
+        <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+        <!-- MAIN -->
+        <main id="main-content">
+
+            <!-- HOME PAGE -->
+            <section class="page is-active" data-page="home" id="home-page">
+                <section class="hero panel">
+                    <div class="hero-copy-column">
+                        <p class="eyebrow">Luxury fashion styling platform</p>
+                        <h1>Build elevated looks, shop modern essentials.</h1>
+                        <p class="hero-text">
+                            Discover premium clothing, footwear, and accessories — then let the outfit builder
+                            assemble polished combinations in seconds.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="button" type="button" data-route="shop">Explore the Store</button>
+                            <button class="button button-secondary" type="button" data-route="builder">Start Outfit
+                                Builder</button>
+                        </div>
+                        <div class="hero-metrics">
+                            <article class="metric-card" data-reveal>
+                                <strong>Real Editorial Imagery</strong>
+                                <span>Curated from real Unsplash fashion photography only.</span>
+                            </article>
+                            <article class="metric-card" data-reveal>
+                                <strong>Automatic Styling Logic</strong>
+                                <span>Matching tops, bottoms, shoes, and accessories.</span>
+                            </article>
+                            <article class="metric-card" data-reveal>
+                                <strong>Persistent Cart</strong>
+                                <span>LocalStorage keeps selections ready between visits.</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="hero-media" data-reveal>
+                        <img src="https://images.unsplash.com/photo-1743664611371-ec6b2d8d5211?q=80&w=1200&auto=format&fit=crop"
+                            alt="Luxury fashion portrait in tailored attire" loading="eager">
+                        <div class="hero-badge">
+                            <span>Curated by</span>
+                            <strong>Abdelrahman Ibrahim Nasef</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-header">
+                    <div>
+                        <p class="eyebrow">Featured collection</p>
+                        <h2>Signature pieces for a refined wardrobe.</h2>
+                    </div>
+                    <button class="link-button" type="button" data-route="shop">View full shop</button>
+                </section>
+                <div class="product-grid featured-grid" id="featured-products"></div>
+
+                <section class="section-header">
+                    <div>
+                        <p class="eyebrow">Categories</p>
+                        <h2>Shop by discipline.</h2>
+                    </div>
+                    <p class="section-copy">Every category selected to support smart, cohesive styling.</p>
+                </section>
+                <div class="category-grid" id="home-categories"></div>
+
+                <section class="benefits-grid">
+                    <article class="info-card panel" data-reveal>
+                        <p class="eyebrow">Styling intelligence</p>
+                        <h3>One builder, complete outfit logic.</h3>
+                        <p>Pick a single hero piece and the builder recommends matching items instantly.</p>
+                    </article>
+                    <article class="info-card panel" data-reveal>
+                        <p class="eyebrow">Luxury interface</p>
+                        <h3>Premium motion, spacing, and finish.</h3>
+                        <p>Dark surfaces, warm gold accents, and responsive layouts deliver a polished feel.</p>
+                    </article>
+                    <article class="info-card panel" data-reveal>
+                        <p class="eyebrow">Ready to browse</p>
+                        <h3>Fast, lightweight, framework-free.</h3>
+                        <p>Built with HTML, CSS, and vanilla JavaScript — runs directly in the browser.</p>
+                    </article>
+                </section>
+            </section>
+
+            <!-- SHOP PAGE -->
+            <section class="page" data-page="shop" id="shop-page">
+                <section class="section-header compact-header">
+                    <div>
+                        <p class="eyebrow">The Store</p>
+                        <h2>Luxury essentials, curated for modern wardrobes.</h2>
+                    </div>
+                    <p class="section-copy">Filter by category, search, or open any piece for a full view.</p>
+                </section>
+
+                <section class="shop-controls panel">
+                    <label class="search-field" for="shop-search">
+                        <span>Search</span>
+                        <input id="shop-search" type="search" placeholder="Search products, styles, or details"
+                            autocomplete="off">
+                    </label>
+                    <div class="filter-group" role="group" aria-label="Filter by category">
+                        <button class="filter-pill is-active" type="button" data-shop-filter="all">All</button>
+                        <button class="filter-pill" type="button" data-shop-filter="clothing">Clothing</button>
+                        <button class="filter-pill" type="button" data-shop-filter="shoes">Shoes</button>
+                        <button class="filter-pill" type="button" data-shop-filter="accessories">Accessories</button>
+                    </div>
+                    <p class="results-count" id="shop-results-count" aria-live="polite"></p>
+                </section>
+
+                <div class="product-grid" id="shop-products"></div>
+            </section>
+
+            <!-- PRODUCT DETAIL PAGE -->
+            <section class="page" data-page="product" id="product-page">
+                <div class="detail-shell panel" id="product-detail"></div>
+            </section>
+
+            <!-- BUILDER PAGE -->
+            <section class="page" data-page="builder" id="builder-page">
+                <section class="section-header compact-header">
+                    <div>
+                        <p class="eyebrow">Outfit Builder</p>
+                        <h2>Assemble a polished look in three moves.</h2>
+                    </div>
+                    <p class="section-copy">Select a top, bottom, and shoes. The system fills gaps and suggests
+                        accessories.</p>
+                </section>
+
+                <section class="builder-layout">
+                    <div class="builder-controls">
+                        <article class="builder-slot panel">
+                            <div class="slot-header">
+                                <p class="eyebrow">Step 1</p>
+                                <h3>Choose a top</h3>
+                            </div>
+                            <div class="builder-options" id="builder-top-options"></div>
+                        </article>
+                        <article class="builder-slot panel">
+                            <div class="slot-header">
+                                <p class="eyebrow">Step 2</p>
+                                <h3>Choose a bottom</h3>
+                            </div>
+                            <div class="builder-options" id="builder-bottom-options"></div>
+                        </article>
+                        <article class="builder-slot panel">
+                            <div class="slot-header">
+                                <p class="eyebrow">Step 3</p>
+                                <h3>Choose shoes</h3>
+                            </div>
+                            <div class="builder-options" id="builder-shoes-options"></div>
+                        </article>
+                    </div>
+
+                    <div class="builder-preview-column">
+                        <article class="panel builder-preview-panel">
+                            <div class="slot-header">
+                                <p class="eyebrow">Live preview</p>
+                                <h3>Resolved outfit</h3>
+                            </div>
+                            <div class="builder-lookboard" id="builder-preview" aria-live="polite"></div>
+                            <div class="builder-summary" id="builder-summary"></div>
+                            <div class="builder-actions">
+                                <button class="button" id="builder-add-outfit" type="button">Add Full Outfit to
+                                    Cart</button>
+                                <button class="button button-secondary" id="builder-reset" type="button">Reset
+                                    Builder</button>
+                            </div>
+                        </article>
+                        <article class="panel" style="padding:24px;">
+                            <div class="slot-header">
+                                <p class="eyebrow">Automatic suggestions</p>
+                                <h3>Finishing pieces</h3>
+                            </div>
+                            <div class="suggestions-grid" id="builder-suggestions"></div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <!-- CHECKOUT PAGE -->
+            <section class="page" data-page="checkout" id="checkout-page">
+                <section class="section-header compact-header">
+                    <div>
+                        <p class="eyebrow">Checkout</p>
+                        <h2>Finalize your curated order.</h2>
+                    </div>
+                    <p class="section-copy">Polished UI demo with working summary and form validation.</p>
+                </section>
+
+                <section class="checkout-layout">
+                    <form class="panel checkout-form" id="checkout-form" novalidate>
+                        <div class="slot-header">
+                            <p class="eyebrow">Delivery details</p>
+                            <h3>Shipping information</h3>
+                        </div>
+                        <label class="form-field" for="checkout-name">
+                            <span>Full name</span>
+                            <input id="checkout-name" name="name" type="text" placeholder="Your full name" required
+                                autocomplete="name">
+                        </label>
+                        <label class="form-field" for="checkout-address">
+                            <span>Address</span>
+                            <textarea id="checkout-address" name="address" rows="4"
+                                placeholder="Street, city, and delivery notes" required></textarea>
+                        </label>
+                        <label class="form-field" for="checkout-phone">
+                            <span>Phone</span>
+                            <input id="checkout-phone" name="phone" type="tel" placeholder="+20 1X XXX XXXX" required
+                                autocomplete="tel">
+                        </label>
+                        <button class="button" type="submit">Place Demo Order</button>
+                        <p class="inline-feedback" id="checkout-feedback" aria-live="polite"></p>
+                    </form>
+
+                    <aside class="panel checkout-summary-panel">
+                        <div class="slot-header">
+                            <p class="eyebrow">Order summary</p>
+                            <h3>Your selected pieces</h3>
+                        </div>
+                        <div id="checkout-summary"></div>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- ABOUT PAGE -->
+            <section class="page" data-page="about" id="about-page">
+                <section class="content-hero panel">
+                    <p class="eyebrow">About the brand</p>
+                    <h2>Stylique — Luxury Outfit Builder & Fashion Store</h2>
+                    <p>Designed as a premium digital wardrobe experience, Stylique blends curated fashion
+                        discovery with smart styling logic. The result is a storefront that feels editorial,
+                        modern, and deeply intentional.</p>
+                </section>
+                <div class="content-grid">
+                    <article class="panel content-card" data-reveal>
+                        <h3>Owner</h3>
+                        <p>Abdelrahman Ibrahim Nasef leads the brand vision with a focus on sharp silhouettes,
+                            premium details, and user-first fashion technology.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Vision</h3>
+                        <p>To help shoppers move from browsing single items to building complete, confident
+                            looks with less effort and more clarity.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Approach</h3>
+                        <p>Luxury aesthetics, responsive commerce UX, and clean interactions — built entirely
+                            with lightweight front-end fundamentals.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONTACT PAGE -->
+            <section class="page" data-page="contact" id="contact-page">
+                <section class="section-header compact-header">
+                    <div>
+                        <p class="eyebrow">Contact</p>
+                        <h2>Reach the atelier.</h2>
+                    </div>
+                    <p class="section-copy">For styling requests, collaborations, or premium client inquiries.</p>
+                </section>
+                <section class="contact-layout">
+                    <div class="content-grid">
+                        <article class="panel content-card" data-reveal>
+                            <h3>Studio Hours</h3>
+                            <p>Sunday to Thursday</p>
+                            <p class="subtle-text">10:00 AM – 7:00 PM</p>
+                        </article>
+                        <article class="panel content-card" data-reveal>
+                            <h3>Email</h3>
+                            <p>concierge@stylique.com</p>
+                            <p class="subtle-text">For product and styling support.</p>
+                        </article>
+                        <article class="panel content-card" data-reveal>
+                            <h3>Phone</h3>
+                            <p>+20 100 555 0198</p>
+                            <p class="subtle-text">Client services and delivery assistance.</p>
+                        </article>
+                    </div>
+                    <form class="panel checkout-form" id="contact-form" novalidate>
+                        <div class="slot-header">
+                            <p class="eyebrow">Message us</p>
+                            <h3>Client contact form</h3>
+                        </div>
+                        <label class="form-field" for="contact-name">
+                            <span>Name</span>
+                            <input id="contact-name" name="name" type="text" placeholder="Your name" required
+                                autocomplete="name">
+                        </label>
+                        <label class="form-field" for="contact-email">
+                            <span>Email</span>
+                            <input id="contact-email" name="email" type="email" placeholder="you@example.com" required
+                                autocomplete="email">
+                        </label>
+                        <label class="form-field" for="contact-message">
+                            <span>Message</span>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="How can we help?"
+                                required></textarea>
+                        </label>
+                        <button class="button" type="submit">Send Message</button>
+                        <p class="inline-feedback" id="contact-feedback" aria-live="polite"></p>
+                    </form>
+                </section>
+            </section>
+
+            <!-- PRIVACY PAGE -->
+            <section class="page" data-page="privacy" id="privacy-page">
+                <section class="content-hero panel">
+                    <p class="eyebrow">Privacy Policy</p>
+                    <h2>How Stylique handles your information.</h2>
+                    <p>This application runs fully in the browser. Cart selections, theme preferences, and outfit
+                        builder choices are stored locally on your device using LocalStorage. No payment or
+                        server-side processing is performed.</p>
+                </section>
+                <div class="content-grid">
+                    <article class="panel content-card" data-reveal>
+                        <h3>Local device storage</h3>
+                        <p>Cart contents and preferences are stored in LocalStorage so your session feels continuous
+                            between visits.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Form submissions</h3>
+                        <p>Checkout and contact forms demonstrate UI behavior only. Submitted data is not transmitted to
+                            any backend in this demo.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Third-party assets</h3>
+                        <p>Photography is loaded from Unsplash — real editorial fashion imagery, never AI-generated
+                            placeholders.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- TERMS PAGE -->
+            <section class="page" data-page="terms" id="terms-page">
+                <section class="content-hero panel">
+                    <p class="eyebrow">Terms of Service</p>
+                    <h2>Usage terms for the Stylique demo.</h2>
+                    <p>This project is a front-end demonstration of a luxury e-commerce and outfit-building
+                        experience. Product pricing, ordering flows, and messaging are illustrative unless
+                        connected to a live commerce backend.</p>
+                </section>
+                <div class="content-grid">
+                    <article class="panel content-card" data-reveal>
+                        <h3>Demo environment</h3>
+                        <p>Orders are not processed for payment or fulfillment. The checkout flow is visual and
+                            interaction-focused.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Product presentation</h3>
+                        <p>Collections, descriptions, and styling guidance are curated to demonstrate premium catalog
+                            design and outfit logic.</p>
+                    </article>
+                    <article class="panel content-card" data-reveal>
+                        <h3>Interface use</h3>
+                        <p>Users may browse, search, build outfits, and manage a local cart. Continued use indicates
+                            acceptance of these terms.</p>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer panel" role="contentinfo">
+            <div>
+                <p class="eyebrow">Stylique</p>
+                <h3>Elevate Your Style. Own Every Look.</h3>
+                <p class="subtle-text">Premium browser experience built with HTML, CSS, and vanilla JavaScript.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#shop">Shop</a>
+                <a href="#builder">Outfit Builder</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </nav>
+            <p class="subtle-text footer-note">
+                All photography sourced from real Unsplash fashion imagery — never AI-generated.
+                &copy; <span id="footer-year"></span> Stylique by Abdelrahman Ibrahim Nasef.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Toast Stack -->
+    <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+
+</html>
